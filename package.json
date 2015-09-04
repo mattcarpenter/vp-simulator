@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cards": "^0.1.1"
+    "cards": "^0.1.1",
+    "poker-evaluator": "0.3.2",
+    "prompt": "^0.2.14",
+    "js-combinatorics": "^0.5.0"
   }
 }
