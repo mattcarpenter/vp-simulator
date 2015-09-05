@@ -1,6 +1,7 @@
 var prompt = require('prompt');
 var analyzer = require('./lib/analyzer');
 var Game = require('./lib/game');
+var utils = require('./lib/utils');
 
 prompt.start();
 
@@ -16,14 +17,16 @@ prompt.get(['hand'], function (err, result) {
 */
 
 var game = new Game();
-console.log(game.deal());
+console.log(utils.toFlatCards(game.deal()));
 prompt.get(['hold'], function (err, result) {
 	var indexes = result.hold
 					? result.hold.replace(/ /g, '')
 						.split(',')
 						.reduce(function (last, curr) { last.push(parseInt(curr, 10)); return last; }, [])
 					: [];
-	console.log(indexes);
 
-	console.log(game.holdAndDraw(indexes));
+	var finalHand = utils.toFlatCards(game.holdAndDraw(indexes));
+	var results = analyzer.evaluate(finalHand, true);
+	console.log(finalHand);
+	console.log(results);
 });
