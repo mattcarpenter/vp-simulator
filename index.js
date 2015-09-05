@@ -17,15 +17,13 @@ prompt.get(['hand'], function (err, result) {
 */
 
 var game = new Game();
-console.log(utils.toFlatCards(game.deal()));
+var hand = utils.toFlatCards(game.deal());
+console.log(hand);
+var ideal = analyzer.evaluate(hand);
+console.log('ideal:');
+console.log(ideal);
 prompt.get(['hold'], function (err, result) {
-	var indexes = result.hold
-					? result.hold.replace(/ /g, '')
-						.split(',')
-						.reduce(function (last, curr) { last.push(parseInt(curr, 10)); return last; }, [])
-					: [];
-
-	var finalHand = utils.toFlatCards(game.holdAndDraw(indexes));
+	var finalHand = utils.toFlatCards(game.holdAndDraw(result.hold.replace(/ /g, '').split(',')));
 	var results = analyzer.evaluate(finalHand, true);
 	console.log(finalHand);
 	console.log(results);
