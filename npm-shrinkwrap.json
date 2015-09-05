@@ -1,0 +1,180 @@
+{
+  "name": "vp-simulator",
+  "version": "0.0.0",
+  "dependencies": {
+    "cards": {
+      "version": "0.1.1",
+      "from": "git://github.com/kbjr/node-cards.git",
+      "resolved": "git://github.com/kbjr/node-cards.git#0a0594c028b26517adcec716f0d4d26ea4052375",
+      "dependencies": {
+        "rand-utils": {
+          "version": "0.0.1",
+          "from": "git://github.com/mattcarpenter/node-rand-utils.git"
+        }
+      }
+    },
+    "js-combinatorics": {
+      "version": "0.5.0",
+      "from": "js-combinatorics@>=0.5.0 <0.6.0",
+      "resolved": "https://registry.npmjs.org/js-combinatorics/-/js-combinatorics-0.5.0.tgz"
+    },
+    "poker-evaluator": {
+      "version": "0.3.1",
+      "from": "poker-evaluator@*"
+    },
+    "prompt": {
+      "version": "0.2.14",
+      "from": "prompt@>=0.2.14 <0.3.0",
+      "resolved": "https://registry.npmjs.org/prompt/-/prompt-0.2.14.tgz",
+      "dependencies": {
+        "pkginfo": {
+          "version": "0.3.0",
+          "from": "pkginfo@>=0.0.0 <1.0.0"
+        },
+        "read": {
+          "version": "1.0.7",
+          "from": "read@>=1.0.0 <1.1.0",
+          "dependencies": {
+            "mute-stream": {
+              "version": "0.0.5",
+              "from": "mute-stream@>=0.0.4 <0.1.0"
+            }
+          }
+        },
+        "revalidator": {
+          "version": "0.1.8",
+          "from": "revalidator@>=0.1.0 <0.2.0"
+        },
+        "utile": {
+          "version": "0.2.1",
+          "from": "utile@>=0.2.0 <0.3.0",
+          "dependencies": {
+            "async": {
+              "version": "0.2.10",
+              "from": "async@>=0.2.9 <0.3.0"
+            },
+            "deep-equal": {
+              "version": "1.0.1",
+              "from": "deep-equal@*"
+            },
+            "i": {
+              "version": "0.3.3",
+              "from": "i@>=0.3.0 <0.4.0"
+            },
+            "mkdirp": {
+              "version": "0.5.1",
+              "from": "mkdirp@>=0.0.0 <1.0.0",
+              "dependencies": {
+                "minimist": {
+                  "version": "0.0.8",
+                  "from": "minimist@0.0.8",
+                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz"
+                }
+              }
+            },
+            "ncp": {
+              "version": "0.4.2",
+              "from": "ncp@>=0.4.0 <0.5.0"
+            },
+            "rimraf": {
+              "version": "2.4.3",
+              "from": "rimraf@>=2.0.0 <3.0.0",
+              "dependencies": {
+                "glob": {
+                  "version": "5.0.14",
+                  "from": "glob@>=5.0.14 <6.0.0",
+                  "dependencies": {
+                    "inflight": {
+                      "version": "1.0.4",
+                      "from": "inflight@>=1.0.4 <2.0.0",
+                      "dependencies": {
+                        "wrappy": {
+                          "version": "1.0.1",
+                          "from": "wrappy@>=1.0.0 <2.0.0"
+                        }
+                      }
+                    },
+                    "inherits": {
+                      "version": "2.0.1",
+                      "from": "inherits@>=2.0.0 <3.0.0"
+                    },
+                    "minimatch": {
+                      "version": "2.0.10",
+                      "from": "minimatch@>=2.0.1 <3.0.0",
+                      "dependencies": {
+                        "brace-expansion": {
+                          "version": "1.1.0",
+                          "from": "brace-expansion@>=1.0.0 <2.0.0",
+                          "dependencies": {
+                            "balanced-match": {
+                              "version": "0.2.0",
+                              "from": "balanced-match@>=0.2.0 <0.3.0"
+                            },
+                            "concat-map": {
+                              "version": "0.0.1",
+                              "from": "concat-map@0.0.1",
+                              "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "once": {
+                      "version": "1.3.2",
+                      "from": "once@>=1.3.0 <2.0.0",
+                      "dependencies": {
+                        "wrappy": {
+                          "version": "1.0.1",
+                          "from": "wrappy@>=1.0.0 <2.0.0"
+                        }
+                      }
+                    },
+                    "path-is-absolute": {
+                      "version": "1.0.0",
+                      "from": "path-is-absolute@>=1.0.0 <2.0.0"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "winston": {
+          "version": "0.8.3",
+          "from": "winston@>=0.8.0 <0.9.0",
+          "dependencies": {
+            "async": {
+              "version": "0.2.10",
+              "from": "async@>=0.2.9 <0.3.0"
+            },
+            "colors": {
+              "version": "0.6.2",
+              "from": "colors@>=0.6.0 <0.7.0"
+            },
+            "cycle": {
+              "version": "1.0.3",
+              "from": "cycle@>=1.0.0 <1.1.0"
+            },
+            "eyes": {
+              "version": "0.1.8",
+              "from": "eyes@>=0.1.0 <0.2.0"
+            },
+            "isstream": {
+              "version": "0.1.2",
+              "from": "isstream@>=0.1.0 <0.2.0"
+            },
+            "stack-trace": {
+              "version": "0.0.9",
+              "from": "stack-trace@>=0.0.0 <0.1.0"
+            }
+          }
+        }
+      }
+    },
+    "random-seed": {
+      "version": "0.2.0",
+      "from": "random-seed@>=0.2.0 <0.3.0",
+      "resolved": "https://registry.npmjs.org/random-seed/-/random-seed-0.2.0.tgz"
+    }
+  }
+}

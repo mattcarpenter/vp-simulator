@@ -17,23 +17,20 @@ var payTable = {
 
 prompt.start();
 
-
-
 // example: As, Jd
-
+/*
 prompt.get(['hand'], function (err, result) {
 	var hand = result.hand.replace(/ /g, '').split(',');
 	var results = analyzer.evaluate(hand);
 	console.log('Results', results);
 });
+*/
 
-
-/*
 var wins = 0;
 var losses = 0;
 var balance = 0;
-
-for (var i = 0; i < 500; i++) {
+/*
+for (var i = 0; i < 50; i++) {
 	var game = new Game();
 	balance -= 5;
 	var hand = utils.toFlatCards(game.deal());
@@ -64,3 +61,27 @@ console.log('Wins:', wins);
 console.log('Losses:', losses);
 console.log('Balance:', balance);
 */
+var game = new Game();
+var hand = utils.toFlatCards(game.deal());
+	//console.log(hand);
+	var ideal = analyzer.evaluate(hand);
+	//console.log('ideal:');
+	//console.log(ideal);
+	console.log(hand);
+	prompt.get(['hold'], function (err, result) {
+		var finalHand = utils.toFlatCards(game.holdAndDraw(result.hold.replace(/ /g, '').split(',')));
+		//var finalHand = utils.toFlatCards(game.holdAndDraw(ideal.cards));
+		var results = analyzer.evaluate(finalHand, true);
+
+		if (results.name !== 'nothing') {
+			console.log(results);
+			wins++;
+			balance += payTable[results.name];
+			if (isNaN(payTable[results.name])) {
+				console.log('error: no pay table entry for ' + results.name);
+			}
+		} else {
+			console.log('loss');
+			losses++;
+		}
+	});
